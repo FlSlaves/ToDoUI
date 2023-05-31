@@ -7,9 +7,11 @@ export function useTask(Owner:string){
     const [tasks, setTasks] = useState<ITask[]>([])
     const [error, setError] = useState('')
     const [owner, setOwner] = useState(Owner)
+
+    const api = "https://localhost:7256/api/ToDo/"
     async function addTask(elem: ITask) {
         try {
-            await axios.post<ITask>('https://localhost:7256/api/ToDo/InsertTask/', elem)
+            await axios.post<ITask>(`${api}InsertTask/`, elem)
             await fetchTask()
         }
         catch (e) {
@@ -19,7 +21,7 @@ export function useTask(Owner:string){
     }
     async function deleteTask(elem: ITask) {
         try {
-            await axios.delete(`https://localhost:7256/api/ToDo/DeleteTask/${elem.id}`)
+            await axios.delete(`${api}DeleteTask/${elem.id}`)
             await fetchTask()
         }
         catch (e) {
@@ -30,7 +32,7 @@ export function useTask(Owner:string){
     async function updateTask(id:number, updateJson:IUpdate[])
     {
         try {
-            await axios.patch(`https://localhost:7256/api/ToDo/UpdateTask/${id}/`, updateJson)
+            await axios.patch(`${api}UpdateTask/${id}/`, updateJson)
             await fetchTask();
         }
         catch (e) {
