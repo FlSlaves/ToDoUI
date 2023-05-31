@@ -31,15 +31,19 @@ export function TaskTable({children, status,name, Update}:TableProps){
 
     return(
         <div
-            ref = {drop}
-            id={status}
-            className={`border-2 border-black ${isOver ? "bg-slate-400" : ""} rounded-xl ml-10 mr-10 mt-4 lg:w-1/5 bg-gray-300 bg-opacity-30`}
+            className={`lg:w-1/5 ml-10 mr-10 mt-4`}
         >
-            <div id={status + 'Header'} className="p-4">
-                <p className="font-mono font-bold text-center text-2xl ">{name}</p>
-            </div>
-            <div id={status + 'List'}>
-                {children}
+            <div
+                ref = {drop}
+                id={status}
+                className={`border-2 border-black ${isOver ? "bg-slate-400" : ""} rounded-xl bg-gray-300 bg-opacity-30`}
+            >
+                <div id={status + 'Header'} className="p-4">
+                    <p className="font-mono font-bold text-center text-2xl ">{name}</p>
+                </div>
+                <div id={status + 'List'}>
+                    {children}
+                </div>
             </div>
         </div>
     )
