@@ -11,4 +11,12 @@ export interface IUpdate{
     path: string
     value: string
 }
-
+export interface ISignIn{
+    userName: string
+    password: string
+}
+export interface IRegister{
+    email: string
+    userName: string
+    password: string
+}

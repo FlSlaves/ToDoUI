@@ -42,14 +42,17 @@ export function useTask(Owner:string){
 
     }
     async function fetchTask() {
-        try {
-            setError('')
-            const response = await axios.get<ITask[]>(`https://localhost:7256/api/ToDo/GetTask/${owner}`)
-            setTasks(response.data)
-        }
-        catch (e){
-            const error = e as AxiosError
-            setError(error.message)
+        if(owner !== "")
+        {
+            try {
+                setError('')
+                const response = await axios.get<ITask[]>(`https://localhost:7256/api/ToDo/GetTask/${owner}`)
+                setTasks(response.data)
+            }
+            catch (e){
+                const error = e as AxiosError
+                setError(error.message)
+            }
         }
     }
     useEffect(()=> {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
  
 export function Head({
-  heading, paragraph, linkName, linkUrl = '#'
+  heading, paragraph, linkName, isLogin
 }) {
   return (
     <div className="mb-10">
@@ -11,9 +11,9 @@ export function Head({
       </h2>
       <p className="mt-2 text-center text-sm text-gray-600 mt-5">
         {paragraph}{' '}
-        <Link to={linkUrl} className="font-medium text-blue-600 hover:text-blue-500">
-          {linkName}
-        </Link>
+          <button className="font-medium text-blue-600 hover:text-blue-500" onClick={isLogin}>
+              {linkName}
+          </button>
       </p>
     </div>
   );

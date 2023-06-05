@@ -2,16 +2,17 @@ const fixedInputClass =
   "rounded-md appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm";
 
 export function Input({
-  handleChange,
-  value,
-  labelText,
-  labelFor,
-  id,
-  name,
-  type,
-  isRequired = false,
-  placeholder,
-  customClass,
+                        handleChange,
+                        value,
+                        labelText,
+                        labelFor,
+                        id,
+                        name,
+                        type,
+                        isRequired = false,
+                        placeholder,
+                        customClass,
+                        maxLength
 }) {
   return (
     <div className="flex justify-center">
@@ -28,6 +29,7 @@ export function Input({
           required={isRequired}
           className={`${fixedInputClass} ${customClass}`}
           placeholder={placeholder}
+          maxLength = {maxLength}
           style={{ width: '500px' }}
         />
       </div>

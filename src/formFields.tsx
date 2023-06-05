@@ -1,13 +1,14 @@
 const loginFields=[
     {
-        labelText:"Email address",
-        labelFor:"email-address",
-        id:"email-address",
-        name:"email",
-        type:"email",
-        autoComplete:"email",
+        labelText:"Username",
+        labelFor:"userName",
+        id:"userName",
+        name:"userName",
+        type:"text",
+        autoComplete:"userName",
         isRequired:true,
-        placeholder:"Email address"   
+        placeholder:"User Name",
+        maxLength: 64
     },
     {
         labelText:"Password",
@@ -17,30 +18,33 @@ const loginFields=[
         type:"password",
         autoComplete:"current-password",
         isRequired:true,
-        placeholder:"Password"   
+        placeholder:"Password",
+        maxLength: 64
     }
 ]
 
 const signupFields=[
     {
-        labelText:"Username",
-        labelFor:"username",
-        id:"username",
-        name:"username",
-        type:"text",
-        autoComplete:"username",
-        isRequired:true,
-        placeholder:"Username"   
-    },
-    {
         labelText:"Email address",
-        labelFor:"email-address",
-        id:"email-address",
+        labelFor:"email",
+        id:"email",
         name:"email",
         type:"email",
         autoComplete:"email",
         isRequired:true,
-        placeholder:"Email address"   
+        placeholder:"Email address",
+        maxLength: 64
+    },
+    {
+        labelText:"userName",
+        labelFor:"userName",
+        id:"userName",
+        name:"userName",
+        type:"text",
+        autoComplete:"userName",
+        isRequired:true,
+        placeholder:"userName",
+        maxLength: 64
     },
     {
         labelText:"Password",
@@ -50,17 +54,8 @@ const signupFields=[
         type:"password",
         autoComplete:"current-password",
         isRequired:true,
-        placeholder:"Password"   
-    },
-    {
-        labelText:"Confirm Password",
-        labelFor:"confirm-password",
-        id:"confirm-password",
-        name:"confirm-password",
-        type:"password",
-        autoComplete:"confirm-password",
-        isRequired:true,
-        placeholder:"Confirm Password"   
+        placeholder:"Password",
+        maxLength: 64
     }
 ]
 
