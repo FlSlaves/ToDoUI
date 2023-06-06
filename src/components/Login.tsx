@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { loginFields } from "../formFields";
 import {FormAction} from "./FormAction";
-import {FormExtra} from "./FormExtra";
 import {Input} from "./Input";
 import {ErrorMessage} from "./ErrorMessage";
 
@@ -51,7 +50,6 @@ export function Login() {
                   ))}
               </div>
 
-              <FormExtra />
               <FormAction handleSubmit={handleSubmit} text="Login"  data={loginState} singUpBoolean={true} isError={setIsError} errorMessage={setErrorMessage}/>
           </form>
       </>
